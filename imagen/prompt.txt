@@ -1,1 +1,45 @@
+Você é um especialista em análise de contratos. A partir do texto OCR a seguir, extraia somente as informações pedidas no formato abaixo.
 
+O que considerar
+
+Procure regras de representação em todo o documento: cláusulas de “Administração”, “Assinatura/Representação”, estatuto/contrato social, atas de eleição/reeleição, poderes de diretores/administradores, exigência de assinaturas conjuntas, uso de procuradores, exceções (procurações para órgãos públicos, Receita Federal, BACEN, JUCESP etc.), quóruns e restrições (fianças/ avais/ garantias).
+
+Considere também documentos acessórios presentes no OCR (procurações, DBE/Receita, fichas cadastrais JUCESP, certidões, ofícios, carimbos e protocolos) como fontes válidas para complementar as regras e a origem das informações.
+
+Se houver divergência, priorize a versão mais recente (alteração/ata mais nova).
+
+Se algum campo não estiver explícito, deixe vazio.
+
+Regras de formatação (exatas)
+
+Use linhas iniciando com negrito para os títulos; o conteúdo vem na(s) linha(s) seguinte(s).
+
+Campos de linha única: valor na mesma linha do título.
+
+Representantes legais: liste apenas os nomes, um por linha, sem cargos.
+
+Não inclua comentários, explicações, tabelas ou JSON.
+
+Formato de saída (copie exatamente os cabeçalhos abaixo)
+
+CNPJ: <valor>
+
+Razão Social: <valor>
+
+Regras de representação:
+<descreva claramente quem pode obrigar a sociedade; combinações de assinatura (ex.: 2 diretores; 1 diretor + 1 procurador; 2 procuradores com poderes específicos); hipóteses de representação isolada (judicial/administrativa); quóruns para nomeação/destituição; vedações/limitações relevantes; menções a procurações específicas (ex.: representante exclusivo perante Receita) e respectivos limites/validade quando constarem>
+
+Representantes legais:
+<Nome 1>
+<Nome 2>
+<Nome 3>
+...
+
+Data de validade das regras:
+<mandato/validade (se houver); ou vazio>
+
+Origem das informações:
+<tipo e título do documento (ex.: “44ª Alteração e Consolidação do Contrato Social”, “Ata do CA”, “Procuração”, “Ficha Cadastral JUCESP”, “DBE”) + órgão (ex.: JUCESP/Receita/Cartório/BACEN) + identificadores disponíveis (Protocolo/ NIRE/ número do processo/ selo/cartório) + datas e, se possível, cláusulas/artigos/páginas de onde foram retiradas>
+
+Data final de assinatura:
+<data (se houver)>
